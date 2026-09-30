@@ -1,0 +1,158 @@
+<!--
+    Natalie Arai
+    Business Website Assignment
+    contact.html - contact page for Happy Tails Shelter
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Contact Happy Tails Shelter">
+        <meta name="keywords" content="contact, adopt a pet, foster, volunteer, Happy Tails Shelter">
+        <meta name="author" content="Natalie">
+        <title>Happy Tails Shelter | Contact</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&family=Roboto:wght@300;400;500&display=swap">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- internal sylesheet used only for contact page -->
+        <style type="text/css">
+            .contact-layout {
+                display:flex;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            .contact-info {
+                flex-basis: 240px;
+                flex-shrink: 0;
+                margin-right: 40px;
+            }
+            .contact-info h2, .contact-form h2 {
+                font-family: "Raleway", Arial, sans-serif;
+                color: #43205a;
+            }
+            .contact-info strong {
+                color: #43205a;
+            }
+            .contact-info a {
+                color: #43205a;
+            }
+            .contact-info a:hover {
+                color: #66937f;
+            }
+            .contact-form {
+                flex-grow: 1;
+                background-color: #c9ddd4;
+                padding: 25px 30px;
+            }
+            .form-row {
+                margin-bottom: 16px;
+            }
+            .contact-form label {
+                display: block;
+                font-weight: 500;
+                margin-bottom: 4px;
+            }
+            .contact-form input, .contact-form select, .contact-form textarea {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 10px;
+                font-family: "Roboto", Arial, sans-serif;
+                font-size: 16px;
+                border: 1px solid #66937f;
+                border-radius: 4px;
+                background-color: #ffffff;
+            }
+            /* for submit button */
+            .contact-form input[type="submit"] {
+                width: auto;
+                border: none;
+                background-color: #43205a;
+                color: #ffffff;
+                font-size: 18px;
+                font-weight: 500;
+                padding: 10px 32px;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+            .contact-form input[type="submit"]:hover {
+                background-color: #2e1340;
+            }
+            /* stacking info for phone display */
+            @media (max-width: 700px) {
+                .contact-layout {
+                    flex-direction: column;
+                }
+                .contact-info {
+                    flex-basis: auto;
+                    margin: 0 0 25px;
+                }
+                .contact-form {
+                    padding: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="Happy Tails Shelter logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="animals.html">Meet the Animals</a></li>
+                    <li><a href="support.html">Support Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="page-banner">
+            <h1>Contact Us</h1>
+            <p>Questions about adopting, fostering, or volunteering? We would love to hear from you.</p>
+        <!-- contact form section-->
+        </section>
+        <section class="section">
+            <div class="contact-layout">
+                <aside class="contact-info">
+                    <h2>Visit us</h2>
+                    <p><strong>Address</strong><br>1234 Pine Crest Road<br>Redwood City, CA 94061</p>
+                    <p><strong>Phone</strong><br>(650) 555-0142</p>
+                    <p><strong>Email</strong><br><a href="mailto:info@happytailsshelter.org">info@happytailsshelter.org</a></p>
+                    <p><strong>Adoption hours</strong><br>Tuesday to Saturday, 11 am to 5 pm<br>Closed Sunday and Monday</p>
+                </aside>
+                <form class="contact-form" method="get" action="#">
+                    <h2>Send us a message</h2>
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Phone (optional)</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                    <div class="form-row">
+                        <label for="topic">I'm interested in</label>
+                        <select id="topic" name="topic">
+                            <option value="adopting">Adopting</option>
+                            <option value="fostering">Fostering</option>
+                            <option value="volunteering">Volunteering</option>
+                            <option value="donating">Donating</option>
+                            <option value="other">Something else</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                    <input type="submit" value="Send message">
+                </form>
+            </div>
+        </section>
+        <footer>
+            <p>Copyright &copy; 2026, Happy Tails Shelter</p>
+        </footer>
+    </body>
+</html>

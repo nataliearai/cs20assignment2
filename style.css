@@ -1,0 +1,387 @@
+/*
+    Natalie Arai
+    Business Website Assignment
+    style.css - external stylesheet for the website
+*/
+
+/* base styles */
+body {
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    color: #1f1f1f;
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+/* adaptive images that do not go past their containers */
+img {
+    max-width: 100%;
+    display: block;
+}
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* header (fixed page element #1) */
+header {
+    background-color: #43205a;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 30px;
+}
+.logo img {
+    width: 60px;
+    height: auto;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* divider line between menu items */
+nav li {
+    border-left: 1px solid #ffffff;
+}
+nav li:first-child {
+    border-left: none;
+}
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 4px 12px;
+    border-bottom: 2px solid #43205a;
+    transition-property: color, border-color;
+    transition-duration: 0.2s;
+}
+ 
+/* Hover effect for menu links and highlight for the current page */
+nav a:hover, nav a.active {
+    color: #c9ddd4;
+    border-bottom: 2px solid #c9ddd4;
+}
+ 
+/* hero background */
+.hero {
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    background-color: #43205a;
+    height: 450px;
+    position: relative;
+    border-bottom: 8px solid #66937f;
+}
+ 
+/* text on top of purple fade out for hero image; left and right set to 0 so it spans the full width */
+.hero-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 20px 30px;
+}
+.hero-text h1 {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+.hero-text p {
+    margin: 0;
+}
+ 
+/* smaller purple banner used on the inner pages */
+.page-banner {
+    background-color: #43205a;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 8px solid #66937f;
+}
+.page-banner h1 {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+.page-banner p {
+    max-width: 560px;
+    margin: 0 auto;
+}
+ 
+/* page sections */
+.section {
+    padding: 30px 20px 35px;
+} 
+.tinted {
+    background-color: #c9ddd4;
+}
+.section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.section-title {
+    color: #43205a;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 29px;
+}
+.center {
+    text-align: center;
+}
+.spaced-top {
+    margin-top: 30px;
+}
+ 
+/* mission section of home page */
+.mission {
+    text-align: center;
+    color: #66937f;
+    font-family: "Raleway", Arial, sans-serif;
+}
+.mission h2 {
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+.mission p {
+    max-width: 360px;
+    margin: 0 auto;
+    font-size: 17px;
+    font-weight: 500;
+}
+ 
+/* featured animal on home page */
+.featured {
+    display: flex;
+    align-items: center;
+    max-width: 510px;
+    margin: 0 auto 25px;
+    background-color: #66937f;
+    color: #ffffff;
+}
+.featured img {
+    width: 35%;
+    height: auto;
+}
+.featured-text {
+    flex-grow: 1;
+    text-align: center;
+    padding: 25px 30px;
+    font-weight: 300;
+}
+.featured-text h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.featured-text a {
+    color: #ffffff;
+}
+.featured-text a:hover {
+    color: #43205a;
+}
+ 
+/* buttons */
+.btn {
+    display: inline-block;
+    background-color: #43205a;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 32px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+.btn:hover {
+    background-color: #66937f;
+}
+ 
+/* on the light green background, darken it instead of turning it green */
+.tinted .btn:hover {
+    background-color: #2e1340;
+}
+.btn-large {
+    font-size: 18px;
+    padding: 10px 32px;
+}
+ 
+/* how a user can get involved */
+.involved {
+    display: flex;
+    align-items: center;
+    max-width: 620px;
+    margin: 0 auto;
+}
+.involved h2 {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 29px;
+    line-height: 1.15;
+    flex-basis: 200px;
+    flex-shrink: 0;
+    margin: 0 40px 0 0;
+}
+.involved-options {
+    flex-grow: 1;
+}
+.involved-options p {
+    margin: 0 0 10px;
+}
+ 
+/* space between the two options (only applies to an option that follows another) */
+.involved-option + .involved-option {
+    margin-top: 25px;
+}
+ 
+/* animal cards */
+.animal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.animal-card {
+    flex-basis: 45%;
+    box-sizing: border-box;
+    padding: 50px;
+    margin-bottom: 40px;
+    background-color: #66937f;
+    color: #ffffff;
+}
+.animal-card img {
+    width: 100%;
+    height: auto;
+}
+.animal-info {
+    padding: 15px 0 0;
+}
+.animal-info h3 {
+    margin-bottom: 4px;
+}
+.animal-details {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: 300;
+}
+.animal-info p {
+    margin: 0;
+}
+ 
+/* suppport us page */
+.content-block {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.content-block h2 {
+    font-family: "Raleway", Arial, sans-serif;
+    color: #43205a;
+}
+.ways-list {
+    padding-left: 20px;
+}
+.ways-list li {
+    margin-bottom: 12px;
+}
+.ways-list strong {
+    color: #43205a;
+}
+ 
+/* hover effect for links inside regular page text */
+.content-block a {
+    color: #43205a;
+    font-weight: 500;
+}
+.content-block a:hover {
+    color: #66937f;
+}
+ 
+/* make table scroll sideways on narrow phones instead of squeezing */
+.table-wrap {
+    overflow-x: auto;
+}
+.impact-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+.impact-table th, .impact-table td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #c9ddd4;
+}
+.impact-table th {
+    background-color: #43205a;
+    color: #ffffff;
+}
+ 
+/* footer (another fixed element) */
+footer {
+    background-color: #43205a;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 20px;
+    font-weight: 300;
+}
+footer p {
+    margin: 0;
+}
+ 
+/* responsiveness for tablets and phones */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 10px;
+    }
+    /* make the menu wrap onto a second line if it runs out of room */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    nav li {
+        margin-bottom: 6px;
+    }
+    nav a {
+        padding: 4px 10px;
+        font-size: 15px;
+    }
+    .hero {
+        height: 280px;
+    }
+    .hero-text h1, .page-banner h1 {
+        font-size: 26px;
+    }
+    .section-title {
+        font-size: 22px;
+    }
+    /* stack the photo on top of the text */
+    .featured {
+        flex-direction: column;
+    }
+    .featured img {
+        width: 100%;
+    }
+    .involved {
+        flex-direction: column;
+        text-align: center;
+    }
+    .involved h2 {
+        flex-basis: auto;
+        margin: 0 0 20px;
+    }
+    /* only one animal card per row */
+    .animal-card {
+        flex-basis: 100%;
+    }
+}
